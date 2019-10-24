@@ -1,0 +1,71 @@
+{
+  "name": "react-electron",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "electron-is-dev": "^1.1.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0"
+  },
+  "main": "electron.js",
+  "homepage": ".",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && nodemon --exec electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "electron-builder -w"
+  },
+  "author": {
+    "name": "your name",
+    "email": "your.email@domain.com",
+    "url": "https://your-website.com"
+  },
+  "build": {
+    "extends": null,
+    "appId": "com.my-website.my-app",
+    "productName": "MyApp",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "./electron.js",
+      "./build/**/*",
+      "./node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "cross-env": "^6.0.3",
+    "electron": "^7.0.0",
+    "electron-builder": "^21.2.0",
+    "nodemon": "^1.19.4",
+    "typescript": "^3.6.4",
+    "wait-on": "^3.3.0"
+  }
+}

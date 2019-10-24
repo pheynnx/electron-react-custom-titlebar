@@ -1,0 +1,21 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 11px;
+    user-select: none;
+}
+
+.App {
+  background-color: #151515;
+  height: 100vh;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
