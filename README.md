@@ -16,3 +16,6 @@
 **Extra notes:**
 - Make sure to set your information in package.json before building
 - Check electron-builder's offical docs for more options and build info
+
+**Goals**
+I want to redo this with CSS Grid and clean up some stuff; also move over to npm completely. I have already done this in a lot of other projects and testing; just need to do it for this template. (2/24/2020)
